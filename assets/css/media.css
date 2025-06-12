@@ -20,6 +20,10 @@
     }
 }
 @media screen and (max-width: 772px){
+   .card img,.card{
+   
+        width: 100% ;
+    }
     
     footer{
         text-align: center;
@@ -39,6 +43,9 @@
         top: 5%;
     }
     .headerContent h2{
+        font-size: 30px;
+    }
+    .section2 h2{
         font-size: 30px;
     }
 
