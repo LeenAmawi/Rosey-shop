@@ -351,7 +351,7 @@ video{
     -ms-border-radius: 22px;
     -o-border-radius: 22px;
 }
-.about .container h2 {
+.about .container h2 ,.about2 h2{
     margin-top: 45%;
     font-family:var(--font);
     color:var(--primary);
@@ -395,7 +395,8 @@ font-size: 20px;
     -o-transition: all 0.4s ease-in-out 1ms ;
 }
 .about2{
-    margin: 5% 0px;
+    margin-bottom: 15px;
+    margin-top: 6%;
 }
 .about img:hover{
     transform: translate(-5px);
