@@ -9,10 +9,16 @@
     .headerContent{
         position: absolute;
         max-width: 850px;
-    /* backdrop-filter: blur(5px); */
     left:5%;
+    top:0% ;
    }
 }
+@media screen and (max-width: 995px){
+
+
+.about h2,.about2 h2{
+    margin-top: 7%;
+}}
 @media screen and (max-width: 560px){
     .navbar{
         position: fixed;
@@ -40,7 +46,7 @@
     }
     .headerContent{
         position: absolute;
-        top: 5%;
+        top: 3%;
     }
     .headerContent h2{
         font-size: 30px;
@@ -61,5 +67,11 @@
     }
    .carousel-inner img{
     height: 100vh;
+   }
+   .headerContent h2{
+    font-size: 25px;
+   }
+   .headerContent p{
+    font-size: 20px;
    }
 }

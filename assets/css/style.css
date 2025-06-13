@@ -59,7 +59,7 @@ a.navbar-brand{
 }
 .headerContent{
         position: absolute;
-        top:9%;
+        top:6%;
         left: 18%;
         z-index: 2;
         max-width: 1000px;
@@ -109,7 +109,10 @@ h2{
     color: var(--primary2);
     font-weight: 600;
 }
- .section1 p{
+.section1 h2 {
+    margin-top: 10%;
+}
+ .section1 p,.about3 p{
     text-align: center;
     font-size: 20px;
     color: var(--primary);
@@ -122,7 +125,6 @@ h2{
 
  }
  .card{
-
     padding:5px;
     transition:all 400ms 10ms ;
     -webkit-transition:all 400ms 10ms ;
@@ -133,7 +135,8 @@ h2{
 }
 .card img {
     width: 100%;
-    height: 300px;
+    
+    height: 500px;
     border-radius: 22px;
     -webkit-border-radius: 22px;
     -moz-border-radius: 22px;
@@ -314,9 +317,17 @@ input[type="submit"]:hover{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.section2 button{
+    padding: 10px 20px;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+}
 .section2 h2{
     max-width: 500px;
-    font-size: 40px;
+    font-size: 35px;
   margin-bottom: 13px;  
     font-family: var(--font);
     font-weight: lighter;
@@ -328,6 +339,77 @@ input[type="submit"]:hover{
 }
 video{
     width: 100%;
+}
+/* ......................................................about................................................. */
+.about .container .aboutContent {
+    height: auto;
+    margin-top: 140px;
+    background-color:var(--primary2);
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+}
+.about .container h2 {
+    margin-top: 45%;
+    font-family:var(--font);
+    color:var(--primary);
+    font-weight:bold;
+    text-align:center;
+    padding:0px;
+    transition: padding 0.4s ease-in-out 1ms ;
+    -webkit-transition: padding 0.4s ease-in-out 1ms ;
+    -moz-transition: padding 0.4s ease-in-out 1ms ;
+    -ms-transition: padding 0.4s ease-in-out 1ms ;
+    -o-transition: padding 0.4s ease-in-out 1ms ;
+}
+.about h2:hover{
+    padding: 10px 10px ;
+    border-radius: 50px;
+    box-shadow: 1px 1px 3px white;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.about p{
+color: white;
+font-family: var(--font);
+font-size: 20px;
+    padding-left: 10px;
+
+}
+.about img{
+    max-height: 70vh;
+    width: 100%;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+    transition: all 0.4s ease-in-out 1ms ;
+    -webkit-transition: all 0.4s ease-in-out 1ms ;
+    -moz-transition: all 0.4s ease-in-out 1ms ;
+    -ms-transition: all 0.4s ease-in-out 1ms ;
+    -o-transition: all 0.4s ease-in-out 1ms ;
+}
+.about2{
+    margin: 5% 0px;
+}
+.about img:hover{
+    transform: translate(-5px);
+    -webkit-transform: translate(-5px);
+    -moz-transform: translate(-5px);
+    -ms-transform: translate(-5px);
+    -o-transform: translate(-5px);
+}
+.about2 p{
+font-size: 17px;
+font-weight: 500;
+}
+.about2 .row{
+    gap:90px !important;
 }
 
 
