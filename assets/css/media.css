@@ -1,3 +1,8 @@
+@media screen and (max-width: 1366px){
+input[type="email"],input[type="submit"]{
+    padding: 10px 30px;
+}
+}
 @media screen and (max-width: 1166px){
   
    footer p{
@@ -10,10 +15,19 @@
         position: absolute;
         max-width: 850px;
     left:5%;
-    top:0% ;
+      top: 4%;
+   }
+   .feedback .row{
+     .card{
+       margin-bottom: 20px; 
+    }
+    
    }
 }
 @media screen and (max-width: 995px){
+    .navContent div{
+        margin: auto !important;
+    }
 .about h2,.about2 h2{
     margin-top: 7%;
 }
@@ -89,11 +103,19 @@ header.Birthday .container h2:hover{
     header.Birthday .container h2:hover{
     font-size: 50px;
 }
+input[type="email"],input[type="password"],input[type="text"],input[type="submit"]{
+    padding: 10px 40px;
+}
+}
+@media screen and (max-width: 395px){
+input[type="email"],input[type="password"],input[type="text"],input[type="submit"]{
+    padding: 10px 30px;
+}
 }
 @media screen and (max-width: 380px){
-    input[type="email"]{
-        padding: 5px 50px;
-    }
+   input[type="email"], input[type="password"],input[type="text"],input[type="submit"]{
+    padding: 10px 20px;
+}
 }
 @media screen and (max-width: 340px){
     input[type="email"]{

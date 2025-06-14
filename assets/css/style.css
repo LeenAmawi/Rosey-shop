@@ -92,18 +92,6 @@ a.navbar-brand{
     margin-bottom: 30px;
    
 }
-button{
-    font-size: 20px !important;
-    color: var(--primary2) !important;
-    border:2px solid var(--primary2) !important;
-}
-button:hover{
-    border-color: var(--primary) !important;
-    color:var(--primary) !important;
-    background-color:unset !important;
-    padding: 10px 20px;
-
-}
 .card{
     border: unset !important;
 }
@@ -263,12 +251,11 @@ footer label{
     font-size: 25px;
     font-weight: 600;
 color: var(--primary);
-margin-bottom: 20px;
 }
 footer div.col-lg-3,footer div.col-lg-2{
     margin-top: 60px !important;
 }
-input[type="email"]{
+input[type="email"],input[type="password"],input[type="text"]{
     border: 2px solid var(--primary);
     padding: 10px 70px;
     border-radius: 10px;
@@ -276,8 +263,9 @@ input[type="email"]{
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    margin-top: 20px;margin-bottom: 5px;
 }
-input[type="email"]:focus{
+input[type="email"]:focus,input[type="password"]:focus,input[type="text"]:focus{
 border-color: var(--primary2);
 outline: none;
 }
@@ -290,16 +278,16 @@ footer ul li span:hover{
     -o-transform: translateY(5px);
 }
 input[type="submit"]{
-    padding:5px 20px ;
-    color: var(--primary2);
+    padding:10px 145px ;
+    color: var(--primary);
     font-size: 15px;
     font-weight: bolder;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border: var(--primary2) solid 3px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: var(--primary) solid 2px;
     box-shadow: none;
     margin-top: 10px;
     transition: all 0.4s ease-in-out 1ms ;
@@ -310,7 +298,8 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     font-size: 20px;
-    padding: 5px 25px;
+    color: var(--primary2);
+    border-color: var(--primary2);
 }
 .copyRight{
     text-align: center;
@@ -323,7 +312,16 @@ input[type="submit"]:hover{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.section2 button{
+
+button:hover{
+    background-color:unset !important;
+    a{
+color:var(--primary) !important;
+    }
+}
+.section2 button,.headerContent button{
+    border:2px solid var(--primary2) !important;
+    font-size: 20px !important;
     padding: 10px 20px;
     border-radius: 22px;
     -webkit-border-radius: 22px;
@@ -346,6 +344,54 @@ input[type="submit"]:hover{
 video{
     width: 100%;
 }
+ /* ................................................................................feedback........................ */
+.feedback{
+    margin: 5% 0px;
+    .card{
+        border: 2px solid var(--primary2) !important;
+        padding: 30px 20px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
+    img{
+        width:100px ;
+        max-height: 100px;
+        border-radius:2221px;
+        -webkit-border-radius:2221px;
+        -moz-border-radius:2221px;
+        -ms-border-radius:2221px;
+        -o-border-radius:2221px;
+}
+i.fi{
+    font-size: 70px !important;
+}
+.row i{
+    font-size: 20px;
+}
+h4{
+    color: var(--primary);
+    font-weight: 600;
+    font-family: var(--font);
+    text-align: start;
+    margin: 20px 0px;
+}
+p{
+    font-family:unset ;
+    font-size: 15px;
+    text-align: start;
+    color: black;
+    margin-bottom: 40px;
+}
+.row{
+    column-gap: 5%;
+   
+}
+
+}
+
 /* ......................................................about................................................. */
 .about .container .aboutContent,.contactHeader  {
     height: auto;
@@ -549,6 +595,20 @@ ins{
        -moz-border-radius: 12px;
        -ms-border-radius: 12px;
        -o-border-radius: 12px;
+       color:var(--primary2);
+        transition: all 0.4s ease-in-out 1ms ;
+    -webkit-transition: all 0.4s ease-in-out 1ms ;
+    -moz-transition: all 0.4s ease-in-out 1ms ;
+    -ms-transition: all 0.4s ease-in-out 1ms ;
+    -o-transition: all 0.4s ease-in-out 1ms ;
+}
+.Btn:hover{
+    transform: translate(3px);
+    color: var(--primary);
+    -webkit-transform: translate(5px);
+    -moz-transform: translate(3px);
+    -ms-transform: translate(3px);
+    -o-transform: translate(3px);
 }
     a i{
         padding-right: 5px;
@@ -559,3 +619,58 @@ ins{
     }
 }
  }
+ /* ..........................login........................ */
+.login{
+    background-image: url(../images/loginBackgorund.svg);
+background-repeat: no-repeat;
+background-size: cover;
+
+a{
+   transition: all 0.4s ease-in-out 1ms ;
+    -webkit-transition: all 0.4s ease-in-out 1ms ;
+    -moz-transition: all 0.4s ease-in-out 1ms ;
+    -ms-transition: all 0.4s ease-in-out 1ms ;
+    -o-transition: all 0.4s ease-in-out 1ms ; 
+}
+ a:hover {
+    font-size: 18px;
+    color: var(--primary2) !important;
+    font-weight: bolder !important;
+}
+label{
+    color: var(--primary);
+    font-weight: bold;
+    
+}
+
+}
+.blur{
+    backdrop-filter: blur(9px);
+    padding: 90px 0px;
+}
+
+
+/* .....................Sales...................... */
+.cards span{
+    font-family: var(--font);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 20px 10px ;
+    border-radius: 2233px;
+    -webkit-border-radius: 2233px;
+    -moz-border-radius: 2233px;
+    -ms-border-radius: 2233px;
+    -o-border-radius: 2233px;
+}
+.sale ins{
+  padding-left: 5px;
+  font-weight: bolder;
+  color: var(--primary2);
+  font-family: unset;
+  font-size: 20px;
+}
+input{
+    display: block;
+    margin: auto;
+}
