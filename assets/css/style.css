@@ -22,6 +22,7 @@ html{
     z-index: 1100;
     width: 100%;
 }
+
 .announce a{
     color: white;
     text-decoration: underline;
@@ -34,7 +35,8 @@ html{
 
 .navbar a{
     color: var(--primary);
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 20px;
 }
 .navbar{
     position: fixed ;
@@ -49,7 +51,10 @@ a.navbar-brand{
     color: var(--primary2);
     font-weight: bolder;
     font-family: var(--font);
-    font-size: 20px;
+    font-size: 25px;
+}
+.navContent a:hover{
+    color: black;
 }
 
 
@@ -59,7 +64,7 @@ a.navbar-brand{
 }
 .headerContent{
         position: absolute;
-        top:6%;
+        top:7%;
         left: 18%;
         z-index: 2;
         max-width: 1000px;
@@ -91,12 +96,12 @@ button{
     font-size: 20px !important;
     color: var(--primary2) !important;
     border:2px solid var(--primary2) !important;
-   
 }
 button:hover{
     border-color: var(--primary) !important;
     color:var(--primary) !important;
     background-color:unset !important;
+    padding: 10px 20px;
 
 }
 .card{
@@ -104,7 +109,7 @@ button:hover{
 }
 h2{
     font-size: 50px ;
-    margin-top: 40px;
+    margin-top:40px;
     margin-bottom: 60px;
     color: var(--primary2);
     font-weight: 600;
@@ -112,7 +117,7 @@ h2{
 .section1 h2 {
     margin-top: 10%;
 }
- .section1 p,.about3 p{
+ .card p{
     text-align: center;
     font-size: 20px;
     color: var(--primary);
@@ -125,6 +130,7 @@ h2{
 
  }
  .card{
+    min-width: 390px;
     padding:5px;
     transition:all 400ms 10ms ;
     -webkit-transition:all 400ms 10ms ;
@@ -207,7 +213,7 @@ footer p{
 margin-bottom: 150px;
 color: var(--primary);
 }
-footer i{
+footer i,.contactContent a i{
     color: var(--primary);
     padding-right: 25px;
     font-size: 25px;
@@ -217,7 +223,7 @@ footer i{
     -ms-transition: all 0.4s ease-in-out 1ms ;
     -o-transition: all 0.4s ease-in-out 1ms ;
 }
-footer i:hover{
+footer i:hover,.contactContent a i:hover{
 font-size: 20px;
     color:var(--primary2) ;
 }
@@ -236,7 +242,7 @@ footer ul p{
     font-size: 18px;
    
 }
-footer li a {
+footer li a{
     color: var(--primary);
     font-size: 17px;
     font-weight: bold;
@@ -341,7 +347,7 @@ video{
     width: 100%;
 }
 /* ......................................................about................................................. */
-.about .container .aboutContent {
+.about .container .aboutContent,.contactHeader  {
     height: auto;
     margin-top: 140px;
     background-color:var(--primary2);
@@ -351,7 +357,8 @@ video{
     -ms-border-radius: 22px;
     -o-border-radius: 22px;
 }
-.about .container h2 ,.about2 h2{
+
+.about .container h2 ,.about2 h2, .contactHeader .container h2{
     margin-top: 45%;
     font-family:var(--font);
     color:var(--primary);
@@ -364,7 +371,10 @@ video{
     -ms-transition: padding 0.4s ease-in-out 1ms ;
     -o-transition: padding 0.4s ease-in-out 1ms ;
 }
-.about h2:hover{
+.contactHeader .container h2{
+    font-size: 45px;
+}
+.about h2:hover,.contactHeader h2:hover {
     padding: 10px 10px ;
     border-radius: 50px;
     box-shadow: 1px 1px 3px white;
@@ -373,14 +383,14 @@ video{
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
 }
-.about p{
+.about p,.contactHeader p{
 color: white;
 font-family: var(--font);
 font-size: 20px;
     padding-left: 10px;
 
 }
-.about img{
+.about img,.contactHeader img{
     max-height: 70vh;
     width: 100%;
     border-radius: 22px;
@@ -398,7 +408,7 @@ font-size: 20px;
     margin-bottom: 15px;
     margin-top: 6%;
 }
-.about img:hover{
+.about img:hover,.contactHeader img:hover{
     transform: translate(-5px);
     -webkit-transform: translate(-5px);
     -moz-transform: translate(-5px);
@@ -412,5 +422,140 @@ font-weight: 500;
 .about2 .row{
     gap:90px !important;
 }
+/* .................................birthday.............................. */
+ .Birthday{
+    height: 70vh;
+    background-image: url('../images/firstCarousel.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-bottom: 5%;
+}
+header.Birthday .container h2{
+    font-size: 110px;
+    padding-top: 25%;
+    padding-left:25%;
+    font-family: var(--font);
+    transition: all 0.4s ease-in-out 1ms ;
+    -webkit-transition: all 0.4s ease-in-out 1ms ;
+    -moz-transition: all 0.4s ease-in-out 1ms ;
+    -ms-transition: all 0.4s ease-in-out 1ms ;
+    -o-transition: all 0.4s ease-in-out 1ms ;
 
+}
+header.Birthday .container h2:hover{
+    text-shadow:4px 4px 7px var(--primary);
+    font-size: 7rem;
+}
+header.Birthday .container p{
+    color: var(--primary);
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* .........................>>categories........................................ */
+.categories{
+    margin-bottom: 5%;
+}
 
+ .categories option{
+    color: var(--primary) !important;
+    font-weight: 600 !important;
+}
+.categories select:first-child{
+    color: var(--primary2) !important;
+    font-weight: 600 !important;
+}
+.categories p{
+    color: var(--primary2) !important;
+    font-weight: 600 !important;
+    border: 1px solid var(--primary2);
+    padding: 5px 0px;
+  text-align: center;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+    transition: all 0.4s ease-in-out 1ms ;
+    -webkit-transition: all 0.4s ease-in-out 1ms ;
+    -moz-transition: all 0.4s ease-in-out 1ms ;
+    -ms-transition: all 0.4s ease-in-out 1ms ;
+    -o-transition: all 0.4s ease-in-out 1ms ;
+}
+.categories p:hover{
+    color: var(--primary) !important;
+    border:2px solid var(--primary);
+    font-size: 25pxpx;
+    padding: 7px 0px;
+    box-shadow:2px 2px 10px var(--primary2)
+}
+.cards .card p{
+    text-align: center;
+    font-family: unset;
+
+}
+ins{
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: bolder;
+}
+.card i{
+    color: var(--primary2);
+    transition: all 0.4s ease-in-out 1ms ;
+    -webkit-transition: all 0.4s ease-in-out 1ms ;
+    -moz-transition: all 0.4s ease-in-out 1ms ;
+    -ms-transition: all 0.4s ease-in-out 1ms ;
+    -o-transition: all 0.4s ease-in-out 1ms ;
+}
+.card:hover i{
+    color: var(--primary) !important;
+}
+/* ..............................contact....................... */
+
+ .contactHeader .container h2{
+    margin-top: 35%;
+ }
+ .contactContent{
+    margin-top: 5%;
+    margin-bottom: 5%; 
+.container{
+    padding: 70px 50px;
+    box-shadow: 2px 2px 4px rgb(180, 180, 180);
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+    p {
+        font-weight: 600;
+        color: var(--primary);
+        a{
+            font-weight: 600;
+        color: var(--primary);
+        text-decoration: underline;}
+    }
+   
+    h4{
+        color: var(--primary2);
+        font-weight: 600;
+    }
+    .Btn{
+       padding: 10px 20px !important;
+       border: 2px solid var(--primary2);
+       font-weight: 600;
+       width: 123px;
+       border-radius: 12px;
+       -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+       -ms-border-radius: 12px;
+       -o-border-radius: 12px;
+}
+    a i{
+        padding-right: 5px;
+        color: var(--primary2);
+    }
+    a i:hover{
+        color: var(--primary) ;
+    }
+}
+ }
