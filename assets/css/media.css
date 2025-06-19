@@ -1,6 +1,6 @@
-@media screen and (max-width: 1385px){
+@media screen and (max-width: 1400px){
 .card{
-    min-width: 270px !important;
+    min-width: 280px !important;
 }
 }
 @media screen and (max-width: 1366px){
@@ -35,7 +35,9 @@ footer input[type="email"],input[type="submit"]{
    }
    .Birthday{
     padding-bottom: 60px;
+    height: auto;
    }
+   
 }
 @media screen and (max-width: 995px){
     .navContent div{

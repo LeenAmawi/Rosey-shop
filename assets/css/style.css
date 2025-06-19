@@ -65,12 +65,13 @@ a.navbar-brand{
 }
 .headerContent{
         position: absolute;
+        padding: 20px 10px;
         top:7%;
         left: 18%;
         z-index: 2;
-        max-width: 1000px;
+        max-width: 900px;
         color: var(--primary2);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(40px);
         font-family: var(--font);
         border-radius:22px ;
         -webkit-border-radius:22px ;
@@ -476,7 +477,7 @@ font-weight: 500;
 }
 header.Birthday .container h2{
     font-size: 110px;
-    padding-top: 25%;
+    padding-top: 20%;
     padding-left:25%;
     font-family: var(--font);
     transition: all 0.4s ease-in-out 1ms ;
