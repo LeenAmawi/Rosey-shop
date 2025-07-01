@@ -18,14 +18,14 @@
         })
     })
     // ..............................................................login..........
-  const loginForm = document.getElementById('login');
+  let loginForm = document.getElementById('login');
   if (loginForm ) {
     loginForm .addEventListener('submit', e => {
       e.preventDefault();
       
 
-      const email = document.getElementById('email2').value.trim();
-      const password = document.getElementById('password').value.trim();
+      let email = document.getElementById('email2').value.trim();
+      let password = document.getElementById('password').value.trim();
 
       if(! email || !password){
         return;
@@ -44,6 +44,46 @@
       
     });
   }
+// ..............................................................regiser..............................
+
+  let registerForm = document.getElementById('formRegister');
+
+  if (registerForm) {
+    registerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let firstName = document.getElementById('FN').value.trim();
+      let lastName = document.getElementById('LN').value.trim();
+      let email4 = document.getElementById('email3').value.trim();
+      let password1 = document.getElementById('passwd').value.trim();
+
+      if (!firstName || !lastName || !email4 || !password1) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Missing fields!',
+          text: 'Please fill in all the fields.'
+        });
+        return;
+      }
+
+      localStorage.setItem('firstName', firstName);
+      localStorage.setItem('lastName', lastName);
+      localStorage.setItem('username', email4);
+      localStorage.setItem('password', password1);
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Account Created!',
+        text: `Welcome, ${firstName} ${lastName}!`,
+        confirmButtonText: 'OK'
+      }).then(() => {
+        registerForm.reset();
+      });
+    });
+  }
+
+
+
 
   //  ..................................................cart page..........................
 
