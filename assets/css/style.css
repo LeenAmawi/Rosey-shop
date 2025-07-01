@@ -590,7 +590,18 @@ ins{
         color: var(--primary2);
         font-weight: 600;
     }
-    .Btn{
+   
+    a i{
+        padding-right: 5px;
+        color: var(--primary2);
+    }
+    a i:hover{
+        color: var(--primary) ;
+    }
+}
+ 
+ }
+ .Btn{
        padding: 10px 20px !important;
        border: 2px solid var(--primary2);
        font-weight: 600;
@@ -615,15 +626,6 @@ ins{
     -ms-transform: translate(3px);
     -o-transform: translate(3px);
 }
-    a i{
-        padding-right: 5px;
-        color: var(--primary2);
-    }
-    a i:hover{
-        color: var(--primary) ;
-    }
-}
- }
  /* ..........................login........................ */
 .login{
     background-image: url(../images/loginBackgorund.svg);
@@ -679,4 +681,80 @@ input{
     display: block;
     margin: auto;
 }
-/* ..............................................................select.................................... */
+/* ..............................................................cart page.................................... */
+ /* body {
+      font-family: var(--font), cursive;
+      background-color: #f8f9fa;
+      color: var(--primary);
+      padding-top: 140px; /* لتجنب الـ navbar المثبت 
+    }
+
+    h2 {
+      color: var(--primary2);
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    table th {
+      color: var(--primary2);
+      font-weight: 700;
+    }
+
+    .btn-remove {
+      color: var(--primary);
+      background: transparent;
+      border: none;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+
+    .btn-remove:hover {
+      color: var(--primary2);
+      cursor: pointer;
+    }
+
+    .cart-summary {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary2);
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-top: 50px;
+    } */
+/* ...................................................delivery page */
+.Delivery label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size:20px;
+    color: var(--primary);
+}
+.Delivery select{
+    box-shadow: none !important;
+    border-color: var(--primary) !important;
+}
+.Delivery input[type="date"]{
+    border-radius: 12px;
+    border:2px solid var(--primary);
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+.Delivery input[type="date"]:focus{
+    outline: none;
+}
+.Delivery{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.Delivery textarea{
+    border: 2px solid var(--primary);
+}
