@@ -469,8 +469,8 @@ font-weight: 500;
 }
 /* .................................birthday.............................. */
  .Birthday{
-    height: 70vh;
-    background-image: url('../images/firstCarousel.png');
+    height: 85vh;
+    background-image: url('../images/carousel3.jpeg');
     background-repeat:no-repeat;
     background-size:cover;
     margin-bottom: 5%;
