@@ -1,4 +1,15 @@
- 
+window.addEventListener('load', function () {
+  setTimeout(() => {
+    let loading1 = document.getElementById('loading');
+    if (loading1) {
+      loading1.style.display = 'none';
+      let content = document.getElementById('main-content');
+      if (content) content.style.display = 'block';
+    }
+  }, 500);
+});
+
+//..........................................................................
  
  document.addEventListener("DOMContentLoaded", function () {
     let counter0 = parseInt(localStorage.getItem("storageCount")) ||0;
@@ -86,6 +97,72 @@
 
 
   //  ..................................................cart page..........................
+  let cartItemsContainer = document.getElementById('cart-items');
+let totalItemsSpan = document.getElementById('total-items');
+let totalPriceSpan = document.getElementById('total-price');
+
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cartItemsContainer.innerHTML = '';
+
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  cart.forEach((product, index) => {
+    totalItems += product.quantity;
+    totalPrice += product.price * product.quantity;
+
+    const item = document.createElement('div');
+    item.className = "card mb-3 p-3";
+
+    item.innerHTML = `
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <img src="${product.image}" class="img-fluid">
+        </div>
+        <div class="col-md-3">
+          <h5>${product.name}</h5>
+          <p>$${product.price.toFixed(2)}</p>
+        </div>
+        <div class="col-md-3">
+          <input type="number" min="1" value="${product.quantity}" class="form-control" onchange="updateQuantity(${index}, this.value)">
+        </div>
+        <div class="col-md-2">
+          <strong>$${(product.price * product.quantity).toFixed(2)}</strong>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-danger" onclick="removeItem(${index})">Remove</button>
+        </div>
+      </div>
+    `;
+    cartItemsContainer.appendChild(item);
+  });
+
+  totalItemsSpan.textContent = totalItems;
+  totalPriceSpan.textContent = totalPrice.toFixed(2);
+}
+
+function updateQuantity(index, quantity) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart[index].quantity = parseInt(quantity);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart();
+}
+
+function removeItem(index) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart();
+}
+
+function clearCart() {
+  localStorage.removeItem('cart');
+  loadCart();
+}
+
+loadCart();
+
 
     // ......................delivery page......................
 const form = document.getElementById("deliveryForm");
@@ -117,13 +194,12 @@ if (form) {
     });
   });
 }
-
-
-
+//...............................................................................
 
 
 
 
   });
+
 
 
