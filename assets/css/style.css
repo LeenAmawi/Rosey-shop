@@ -715,7 +715,7 @@ input{
     border: 2px solid var(--primary);
 }
 
-/* ............................................ */
+/* .....................spinner....................... */
 #loading {
   position: fixed;
   inset: 0;
@@ -730,7 +730,7 @@ input{
 #loading p {
   margin-top: 10px;
   font-weight: bold;
-  color: #007bff;
+  color: var(--primary2);
 }
 #loading .spinner{
    width: 100%; 
