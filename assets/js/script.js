@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let cartButtons = document.querySelectorAll(".cartButton");
   cartButtons.forEach(button => {
     button.addEventListener("click", function (e) {
-      e.stopPropagation(); // منع تفعيل أحداث أخرى
+      e.stopPropagation(); 
       e.preventDefault();
 
       let card = button.closest(".card");
@@ -46,13 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
-
-      // تحديث عداد السلة
       counter0 = cart.reduce((sum, p) => sum + p.quantity, 0);
       localStorage.setItem("storageCount", counter0);
       counter1.textContent = counter0;
-
-      // الانتقال لصفحة السلة
       window.location.href = "cart.html";
     });
   });
